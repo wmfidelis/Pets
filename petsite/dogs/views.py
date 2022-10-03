@@ -3,8 +3,6 @@ from django.shortcuts import render,HttpResponse
 from .forms import petForm
 from .models import Pets
 
-
-
 def index(request):
     if request.method == 'POST':
         form = petForm(request.POST)
@@ -27,7 +25,4 @@ def viewPets(request):
                 form.append(f"{item.name}: 'cat'")
             else:
                 form.append(f"{item.name}: 'hamster'")
-
-    
-
         return render(request, 'viewPets.html',{'form': form })
