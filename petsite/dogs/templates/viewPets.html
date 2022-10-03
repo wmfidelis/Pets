@@ -1,0 +1,9 @@
+<form action=" " method="get">
+    {% csrf_token%}
+    {%for item in form%}
+        <ul> 
+            <li>{{item}}</li>
+        </ul>
+    {%endfor%}
+    
+</form>
